@@ -1,0 +1,45 @@
+.list-container-outer {
+  background: linear-gradient(var(--blurple7), black);
+  padding-bottom: 1rem;
+}
+
+.list-container {
+  color: var(--fg);
+  align-self: center;
+  font-size: 120%;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.list-container a {
+  color: var(--link-fg);
+  text-decoration: underline;
+}
+
+.list-item {
+  background: var(--status-focus-bg);
+  background: var(--status-bg);
+  box-shadow: var(--boxshadow-border);
+  border: var(--boxshadow-border);
+  border-radius: var(--br);
+  position: relative;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.list-item IMG{
+  width: 100%;
+}
+
+.list-item-inner {
+  padding: 0.5rem 0.75rem;
+}
+
+.list-item-date {
+  text-align: center;
+  background: var(--status-focus-info-bg);
+  .post-datetags {
+    margin: 0;
+  }
+}

@@ -1,0 +1,39 @@
+{{ define "main" }}
+<div class="list-container-outer">
+  <div class="list-container">
+    <div class="list-container-inner">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+      {{ range .Pages }}
+      <div class="list-item">
+        <div class="list-item-inner">
+          <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+          {{ if .Params.featuredImage }}
+          <a href="{{ .RelPermalink }}">
+          <img src="{{ .Params.featuredImage }}" class="featured-image" />
+          </a>
+          {{ else if .Params.image }}
+          <a href="{{ .RelPermalink }}">
+            <img src="{{ .RelPermalink }}/{{ .Params.image }}" class="featured-image" />
+          </a>
+          {{ end }}
+          {{ if .Params.subtitle }}
+          <h3><a href="{{ .RelPermalink }}">{{ .Params.subtitle }}</a></h3>
+          {{ end }}
+          <p>{{ .Summary | plainify | truncate 500 "..." }}</p>
+        </div>
+        <div class="list-item-date">
+          <p class="post-datetags">{{ .Date.Format "Jan 2, 2006" }} -
+          {{ with .Params.tags }}
+            {{ range $index, $tag := . }}
+            <a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>{{ if lt (add $index 1) (len .) }} {{ end }}
+            {{ end }}
+          </p>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

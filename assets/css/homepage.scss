@@ -1,0 +1,207 @@
+.homepage {
+  font-family: 'MesloLGS NF', 'sans-serif';
+}
+
+.homepage .expertise {
+  color: var(--fg);
+  background-color: var(--profile-bg);
+  padding: 50px 0px;
+}
+.homepage .expertise .container {
+  align-self: center;
+  font-size: 120%;
+
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1024px;
+  svg {
+    width: 60px !important;
+    height: auto;
+  }
+}
+.homepage .expertise .container H1 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 2.5rem;
+  padding-top: 1em;
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+.homepage .expertise .container H2 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 2rem;
+  padding-top: 1em;
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+.homepage .expertise .container .user-details {
+  text-align: center;
+  padding: 5px auto;
+
+  h1 {
+    font-weight: 400;
+  }
+}
+
+.homepage .expertise .container .expertise-categories {
+  text-align: center;
+  font-size: 60px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  p {
+    font-size: 16px;
+  }
+}
+
+.homepage .expertise .container .category {
+  margin: 10px;
+  flex: 1 1 0;
+  h2, h3 {
+    font-weight: 400;
+  }
+}
+
+.homepage .hero {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(var(--blurple7), black);
+}
+
+.homepage .hero H1 {
+  font-size: 76px;
+  font-weight: normal;
+  margin: 0 0;
+  &::after {
+    content: '';
+    display: inline-block;
+    width: .2em;
+    height: .7em;
+    background-color: currentColor;
+    margin-left: .1em;
+    animation: blink 1s linear infinite forwards;
+    vertical-align: baseline;
+  }
+}
+
+.homepage .hero H2 {
+  font-size: 32px;
+  font-weight: normal;
+  margin: 0 0 10px 0;
+}
+
+.homepage .hero .homepageContainer {
+  z-index: 1;
+  text-align: center;
+  color: var(--fg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.homepage .hero .homepageContainer .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  a {
+    outline: 0 !important;
+    outline-style: none;
+    border: none !important;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Ensures link acts as a container */
+    justify-content: center; /* Centers the icon inside the link */
+    align-items: center; /* Centers the icon inside the link */
+    text-align: center;
+  }
+  .icon {
+    font-family: FontAwesome !important;
+    color: var(--fg);
+    width: 30px !important; /* Adjust for larger touch target */
+    height: 30px !important; /* Adjust for larger touch target */
+    font-size: 30px !important;
+    line-height: 30px !important;
+    border-radius: 50%; /* Makes the icon a perfect circle */
+    border: 2px solid var(--fg);
+    margin: 5px;
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center !important;
+    transition: all 0.5s ease-in-out !important; /* Smooth hover effects */
+    horiz-align: center;
+
+    &:hover {
+      color: var(--blurple4); /* Change icon color on hover */
+      background: var(--fg); /* Change background color on hover */
+      transform: scale(1.1); /* Slight zoom effect on hover */
+    }
+    &:active {
+      color: var(--fg);
+      background: #FFF;
+    }
+    @media only screen and (min-width:700px) {
+      width: 30px;
+      height: 30px;
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+  img {
+    height: 20px;
+    margin: 5px;
+    transition: all 0.3s ease-in-out; /* Smooth hover effects */
+    &:hover {
+      -webkit-filter: invert(100%);
+      filter: invert(100%);
+    }
+    &:active {
+      -webkit-filter: invert(100%);
+      filter: invert(100%);
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    visibility: visible;
+  }
+
+  50% {
+    visibility: visible;
+  }
+
+  51% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: hidden;
+  }
+}
+
+.homepage-portrait {
+  align-content: center;
+  text-align: center;
+}
+.homepage-portrait-inner {
+  max-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.homepage-portrait IMG {
+  max-width: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--fg);
+}

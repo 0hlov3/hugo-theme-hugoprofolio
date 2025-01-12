@@ -1,0 +1,29 @@
+{{- with resources.Get "css/main.css" }}
+  {{- if eq hugo.Environment "development" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{ $stylesCSS := resources.Get "css/styles.scss" | toCSS | minify }}
+<link rel="stylesheet" href="{{ $stylesCSS.RelPermalink }}" />
+{{ $listCSS := resources.Get "css/list.scss" | toCSS | minify }}
+<link rel="stylesheet" href="{{ $listCSS.RelPermalink }}" />
+{{ $singleCSS := resources.Get "css/single.scss" | toCSS | minify }}
+<link rel="stylesheet" href="{{ $singleCSS.RelPermalink }}" />
+{{ $fontsCSS := resources.Get "css/fonts.scss" | toCSS | minify }}
+<link rel="stylesheet" href="{{ $fontsCSS.RelPermalink }}" />
+{{ $homepageSCSS := resources.Get "css/homepage.scss" | toCSS | minify }}
+<link rel="stylesheet" href="{{ $homepageSCSS.RelPermalink }}" />
+<!-- our project just needs Font Awesome Solid + Brands -->
+{{- with resources.Get "css/all.css" | toCSS | minify }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{- end }}
+{{- with resources.Get "css/fontawesome.css" | toCSS | minify }}
+<link rel="stylesheet" href="{{ .RelPermalink }}">
+{{- end }}
+{{- with resources.Get "css/perlinnoise.css" | toCSS | minify }}
+<link rel="stylesheet" href="{{ .RelPermalink }}">
+{{- end }}

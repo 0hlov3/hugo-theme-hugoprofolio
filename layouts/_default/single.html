@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="single-container-outer">
+<div class="single-container">
+  <div class="single-container-inner">
+    <div class="single-header">
+      <h1>{{ .Title }}</h1>
+      {{ if .Params.subtitle }}
+      <h2>{{ .Params.subtitle }}</h2>
+      {{ end }}
+    </div>
+<div class="single-item">
+  <div class="single-item-inner">
+
+  {{ .Content }}
+
+    <!--
+  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+-->
+    <div class="single-item-date">
+      <p class="post-datetags">
+        {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+        {{ $dateHuman := .Date | time.Format ":date_long" }}
+        <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time> -
+        {{ with .Params.tags }}
+        {{ range $index, $tag := . }}
+        <a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>{{ if lt (add $index 1) (len .) }} {{ end }}
+        {{ end }}
+      </p>
+      {{ end }}
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{{ end }}

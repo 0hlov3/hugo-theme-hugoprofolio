@@ -1,0 +1,30 @@
+name = 'Hugo Profolio'
+license = 'MIT'
+licenselink = 'https://github.com/0hlov3/hugo-theme-hugoprofolio/LICENSE'
+description = 'A minimal Hugo theme for professional resumes and blogs, adapted from `jekyll-theme-minimal-resume` with added blogging and portfolio features.'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/0hlov3/hugo-theme-hugoprofolio'
+
+# If you have a running demo of the theme
+#demosite = 'https://owner.github.io/repo'
+
+# Taxonomy terms
+tags = ['blog', 'Personal', 'Contact', 'Minimal']
+#features = ['some', 'awesome', 'features']
+
+# If the theme has multiple authors
+authors = [
+  {name = '0hlov3', homepage = 'https://schoenwald.aero'},
+]
+
+# If the theme has a single author
+[author]
+  name = '0hlov3'
+  homepage = 'https://schoenwald.aero'
+
+# If porting an existing theme
+[original]
+  author = 'murraco'
+  homepage = 'https://github.com/murraco/jekyll-theme-minimal-resume'
+  repo = 'https://github.com/murraco/jekyll-theme-minimal-resume'

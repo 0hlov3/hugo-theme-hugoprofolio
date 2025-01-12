@@ -1,0 +1,90 @@
+.single-container-outer {
+  background: linear-gradient(var(--blurple7), black);
+  padding-bottom: 1rem;
+}
+
+.single-container {
+  color: var(--fg);
+  align-self: center;
+
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.signle-container a {
+  color: var(--link-fg);
+  text-decoration: underline;
+}
+
+.single-item {
+  background: var(--status-focus-bg);
+  background: var(--status-bg);
+  box-shadow: var(--boxshadow-border);
+  border: var(--boxshadow-border);
+  border-radius: var(--br);
+  position: relative;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.single-item-inner {
+  padding: 0.5rem 0.75rem;
+}
+
+.single-container .thread {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+  box-shadow: var(--boxshadow);
+  border: var(--boxshadow-border);
+}
+
+.single-container .single-header {
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+  box-shadow: var(--boxshadow);
+  border: var(--boxshadow-border);
+  text-align: center;
+  padding: 20px 10px;
+  background: var(--status-focus-bg);
+  background: var(--status-bg);
+  border: var(--boxshadow-border);
+  border-radius: var(--br);
+  position: relative;
+  margin: 1rem 0;
+}
+
+.single-container .single-header H1 {
+  margin: 0;
+}
+
+.single-item-date {
+  text-align: center;
+  background: var(--status-focus-info-bg);
+  .post-datetags {
+    margin: 0;
+  }
+}
+
+.single-container pre {
+  white-space: pre;
+  overflow-x: auto;
+  word-wrap: normal;
+  padding: 10px 10px;
+}
+
+.single-container pre code {
+  font-family: "MesloLGS NF", "Source Code Pro", monospace;
+  font-size: 12px;
+}
+
+.single-container IMG {
+  width: 100%;
+}
+
+.single-container .highlight pre {
+  background-color: var(--bg) !important;
+}
