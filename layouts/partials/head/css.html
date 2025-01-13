@@ -7,6 +7,14 @@
     {{- end }}
   {{- end }}
 {{- end }}
+
+{{- if ne .Site.Params.colorScheme "" }}
+{{ $colorsCSS := resources.Get (printf "css/colors-%s.scss" .Site.Params.colorScheme) | toCSS | minify }}
+<link rel="stylesheet" href="{{ $colorsCSS.RelPermalink }}" />
+{{- else }}
+{{ $colorsCSS := resources.Get "css/colors-standard.scss" | toCSS | minify }}
+<link rel="stylesheet" href="{{ $colorsCSS.RelPermalink }}" />
+{{- end }}
 {{ $stylesCSS := resources.Get "css/styles.scss" | toCSS | minify }}
 <link rel="stylesheet" href="{{ $stylesCSS.RelPermalink }}" />
 {{ $listCSS := resources.Get "css/list.scss" | toCSS | minify }}

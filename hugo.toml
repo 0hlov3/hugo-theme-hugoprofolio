@@ -26,3 +26,6 @@ weight = 40
   [module.hugoVersion]
     extended = false
     min = "0.116.0"
+
+[params]
+colorScheme = ""
