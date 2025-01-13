@@ -9,9 +9,11 @@ body {
 }
 
 .footer {
+  background-color: var(--profile-bg);
   align-items: center;
   text-align: center;
   border-top-width: 1px;
+  padding: 1px 0px;
 }
 
 .footer a {
@@ -34,8 +36,8 @@ a {
 
 .nav-bar {
   width: 100%;
-  background-color: var(--profile-bg); // Dark background
-
+  background-color: var(--profile-bg);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -83,6 +85,13 @@ a {
     color: #1B2735; // Contrast text color
     font-weight: bold;
   }
+}
+
+/* Style for the active link */
+.nav-link[aria-current="page"] {
+  background-color: #FFD700; /* Highlight active link */
+  color: #1B2735; /* Contrast text color */
+  font-weight: bold;
 }
 
 /* Responsive Design */

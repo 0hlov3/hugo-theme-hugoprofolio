@@ -205,3 +205,8 @@
   border-radius: 50%;
   border: 2px solid var(--fg);
 }
+
+.custom-icon path {
+  fill: var(--fg); /* Change the color */
+  transition: fill 0.3s ease; /* Smooth transition for hover effect */
+}
