@@ -6,6 +6,7 @@
   color: var(--fg);
   background-color: var(--profile-bg);
   padding: 50px 0px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px -3px 8px;
 }
 .homepage .expertise .container {
   align-self: center;
@@ -72,7 +73,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(var(--blurple7), black);
+  background: linear-gradient(var(--blurple7), var(--profile-bg));
 }
 
 .homepage .hero H1 {

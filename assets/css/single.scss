@@ -1,5 +1,5 @@
 .single-container-outer {
-  background: linear-gradient(var(--blurple7), black);
+  background: linear-gradient(var(--blurple7), var(--profile-bg));
   padding-bottom: 1rem;
 }
 
@@ -28,7 +28,7 @@
   padding: 0;
 }
 
-.single-item-inner {
+.single-item-content {
   padding: 0.5rem 0.75rem;
 }
 
@@ -64,6 +64,7 @@
 .single-item-date {
   text-align: center;
   background: var(--status-focus-info-bg);
+  padding: 5px;
   .post-datetags {
     margin: 0;
   }

@@ -67,8 +67,8 @@ a {
 
 
 .nav-link {
-  text-decoration: none; // Remove underline
-  color: #FFFFFF; // White text
+  text-decoration: none;
+  color: var(--fg);
   font-size: 18px;
   font-weight: 600;
   padding: 8px 15px;
@@ -76,21 +76,23 @@ a {
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: #38495a; // Light hover background
-    color: #FFD700; // Gold text on hover
+    background-color: var(--button-fg);
+    color: var(--orange2);
   }
 
   &.active {
-    background-color: #FFD700; // Highlight active link
-    color: #1B2735; // Contrast text color
+    background-color: var(--orange2); // Highlight active link
+    color: var(--button-fg); // Contrast text color
     font-weight: bold;
   }
 }
 
 /* Style for the active link */
 .nav-link[aria-current="page"] {
-  background-color: #FFD700; /* Highlight active link */
-  color: #1B2735; /* Contrast text color */
+  //background-color: #FFD700; /* Highlight active link */
+  //color: #1B2735; /* Contrast text color */
+  background-color: var(--orange2); // Highlight active link
+  color: var(--profile-bg); // Contrast text color
   font-weight: bold;
 }
 

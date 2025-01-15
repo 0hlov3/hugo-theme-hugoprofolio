@@ -1,0 +1,50 @@
+.resume-outer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1024px;
+}
+
+.resume-outer hr {
+  border: none; /* Removes default styling */
+  height: 2px; /* Sets the thickness of the line */
+  background-color: var(--button-fg); /* Sets the color of the line */
+  margin: 20px 0; /* Optional: adds spacing around the line */
+}
+
+.resume-about-container {
+  display: block;
+  background-color: var(--bg);
+  float: left;
+  width: 25%;
+  padding: 12px;
+}
+
+.resume-about-container UL {
+  padding: 15px;
+  margin: 0;
+}
+
+.resume-about-container .resume-image IMG {
+  width: 100% !important;
+  border-radius: 50%;
+  border: 0px solid var(--fg);
+}
+
+.resume-outer .single-item-content {
+  width: 75%;
+  padding: 0;
+}
+
+.resume-outer .resume-content-name {
+  padding: 15px 15px;
+  background-color: var(--bg);
+}
+
+.resume-outer .resume-content-name h2 {
+  font-weight: normal;
+  font-size: 2.5em;
+}
+
+.resume-outer .resume-content {
+  padding: 15px;
+}

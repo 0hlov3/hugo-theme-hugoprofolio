@@ -15,6 +15,8 @@
 {{ $colorsCSS := resources.Get "css/colors-standard.scss" | toCSS | minify }}
 <link rel="stylesheet" href="{{ $colorsCSS.RelPermalink }}" />
 {{- end }}
+{{ $resumeCSS := resources.Get "css/resume.scss" | toCSS | minify }}
+<link rel="stylesheet" href="{{ $resumeCSS.RelPermalink }}" />
 {{ $stylesCSS := resources.Get "css/styles.scss" | toCSS | minify }}
 <link rel="stylesheet" href="{{ $stylesCSS.RelPermalink }}" />
 {{ $listCSS := resources.Get "css/list.scss" | toCSS | minify }}
