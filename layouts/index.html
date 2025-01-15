@@ -40,12 +40,16 @@
                       <i class="icon fa fa-linkedin"></i>
                   </a>
                   {{- end }}
+                  {{- if .Site.Params.social.medium }}
                   <a href="{{ .Site.Params.social.medium }}" aria-label="Medium" target="_blank">
                       <i class="icon fa fa-medium-m"></i>
                   </a>
+                  {{- end }}
+                  {{- if .Site.Params.social.mastodon }}
                   <a href="{{ .Site.Params.social.mastodon }}" aria-label="Mastodon" target="_blank">
                       <i class="icon fa fa-mastodon"></i>
                   </a>
+                  {{- end }}
                   {{- if .Site.Params.social.stackoverflow }}
                   <a href="{{ .Site.Params.social.stackoverflow }}" aria-label="StackOverflow" target="_blank">
                       <i class="icon fa fa-stack-overflow"></i>
