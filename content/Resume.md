@@ -1,6 +1,6 @@
 +++
 title = 'Resume'
-date = 2023-01-01T08:00:00-07:00
+date = 2024-01-16T08:00:00-07:00
 lastmod = 2025-01-13T21:11:10+01:00
 draft = false
 layout = "resume"
@@ -11,6 +11,7 @@ skills = ["AWS", "Go", "Grafana", "Kubernetes", "Prometheus"]
 languages = ["German", "English"]
 certificates = ["CKA", "CKAD", "CKS", "KCNA", "KCSA"]
 hobbies = ["Hiking", "Reading", "Jogging"]
+tags = ["Resume"]
 +++
 
 ## Career Objective
@@ -30,6 +31,6 @@ ___
 ## Systems Administrator
 ### TechWave Solutions Inc.
 
-    Developed and executed a comprehensive monitoring and alerting system using Prometheus and Grafana, resulting in a 50% reduction in incident response times.
-    Collaborated with development teams to integrate DevOps best practices, increasing code deployment frequency by 60% and reducing rollback rates by 15%.
-    Implemented infrastructure as code (IaC) using Terraform, enabling consistent and repeatable environment setups, which improved deployment accuracy by 35%.
+- Developed and executed a comprehensive monitoring and alerting system using Prometheus and Grafana, resulting in a 50% reduction in incident response times.
+- Collaborated with development teams to integrate DevOps best practices, increasing code deployment frequency by 60% and reducing rollback rates by 15%.
+- Implemented infrastructure as code (IaC) using Terraform, enabling consistent and repeatable environment setups, which improved deployment accuracy by 35%.
