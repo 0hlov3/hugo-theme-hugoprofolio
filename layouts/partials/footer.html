@@ -1,9 +1,12 @@
 <div class="footer">
-  <div class="footer-inner">
-    <p>Copyright {{ now.Year }}. All rights reserved.</p>
-    <p>Built with GoHugo.io and <span class="love">❤</span> by <a href="https://github.com/0hlov3">0hlov3</a></p>
-    <a rel="me" href="https://mstdn.social/@0hlov3"></a>
-    <a rel="me" href="https://chaos.social/@0hlov3"></a>
-  </div>
+    <div class="footer-inner">
+        <p>Copyright {{ now.Year }}. All rights reserved.</p>
+        <p>Built with GoHugo.io and <span class="love">❤</span> by <a href="https://github.com/0hlov3">0hlov3</a></p>
+        {{ with .Site.Params.footer.fediRelMe }}
+        {{ range . }}
+        <a rel="me" href="{{ . }}"></a>
+        {{ end }}
+        {{ end }}
+    </div>
 </div>
 

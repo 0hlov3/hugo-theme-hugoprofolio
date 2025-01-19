@@ -28,8 +28,12 @@ weight = 40
     min = "0.116.0"
 
 [params]
-colorScheme = "blurple"
+colorScheme = ""
+#colorScheme = "blurple"
 
 [[params.resume]]
-about = "dddd"
+about = "Test"
 languages = ["Deutsch", "English"]
+
+[params.footer]
+fediRelMe = []
