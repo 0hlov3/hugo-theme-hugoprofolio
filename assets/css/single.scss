@@ -17,6 +17,13 @@
   text-decoration: underline;
 }
 
+.single-container .canonicalURL {
+  text-align: center;
+  background: var(--status-focus-info-bg);
+  padding: 5px;
+  border: var(--boxshadow-border);
+}
+
 .single-item {
   background: var(--status-focus-bg);
   background: var(--status-bg);

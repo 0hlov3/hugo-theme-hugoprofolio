@@ -2,6 +2,9 @@
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
 <head>
   {{ partial "head.html" . }}
+  {{ with .Params.canonicalURL }}
+  <link rel="canonical" href="{{ . }}" />
+  {{ end }}
 </head>
 <body>
   <header class="header">
