@@ -1,44 +1,38 @@
 :root {
-  /* Define our nice blurple palette */
-  --blurple7: #ebe6f8;
-  --blurple6: #d6cceb;
-  --blurple5: #c2b3e1;
-  --blurple4: #aa60ff;
-  --blurple3: #783d9f;
-  --blurple2: #2d2b55;
-  --blurple1: #1f1f41;
+  /* Define our nice standart palette */
+  --standart1: #ebe6f8;
+  --standart2: #d6cceb;
+  --standart3: #c2b3e1;
+  --standart4: #aa60ff;
+  --standart5: #783d9f;
+  --standart6: #ffffff;
+  --standart7: #ffffff;
 
   /* Override orange trim */
   --orange2: #fad000;
 
-  /* Restyle basic colors to use blurple */
-  --blue1: var(--blurple1);
-  --blue2: var(--blurple2);
-  --blue3: var(--blurple3);
-
   /* Basic page styling (background + foreground) */
-  --bg: var(--blurple7);
-  --bg-accent: var(--blurple6);
-  --fg: var(--blurple1);
-  --fg-reduced: var(--blurple2);
+  --bg: var(--standart7);
+  --bg-accent: var(--standart6);
+  --fg: var(--standart1);
+  --fg-reduced: var(--standart2);
 
   /* Profile page styling */
-  --profile-bg: var(--blurple6);
+  --profile-bg: var(--standart6);
 
-  /* Blurpleize buttons */
-  --button-bg: var(--blurple2);
-  --button-fg: var(--blurple5);
+  /* standartize buttons */
+  --button-bg: var(--standart2);
+  --button-fg: var(--standart5);
 
-  /* Blurpleize statuses */
-  --status-bg: var(--blurple6);
-  --status-focus-bg: var(--blurple6);
-  --status-info-bg: var(--blurple5);
-  --status-focus-info-bg: var(--blurple5);
+  /* standartize statuses */
+  --status-bg: var(--standart6);
+  --status-focus-bg: var(--standart6);
+  --status-info-bg: var(--standart5);
+  --status-focus-info-bg: var(--standart5);
 
   /* Used around statuses + other items */
   --boxshadow-border: 0.08rem solid black;
   --size: 20px;
 
-  --fg-accent: var(--blue3);
   --link-fg: var(--fg-accent);
 }

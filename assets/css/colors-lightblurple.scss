@@ -1,0 +1,43 @@
+:root {
+  /* Define our nice lightblurple palette */
+  --lightblurple1: #1f1f41;
+  --lightblurple2: #2d2b55;
+  --lightblurple3: #783d9f;
+  --lightblurple4: #aa60ff;
+  --lightblurple5: #c2b3e1;
+  --lightblurple6: #d6cceb;
+  --lightblurple7: #ebe6f8;
+
+  /* Override orange trim */
+  --orange2: #fad000;
+
+  /* Restyle basic colors to use lightblurple */
+  --blue1: var(--lightblurple1);
+  --blue2: var(--lightblurple2);
+  --blue3: var(--lightblurple3);
+
+  /* Basic page styling (background + foreground) */
+  --bg: var(--lightblurple7);
+  --bg-accent: var(--lightblurple6);
+  --fg: var(--lightblurple1);
+  --fg-reduced: var(--lightblurple2);
+
+  /* Profile page styling */
+  --profile-bg: var(--lightblurple6);
+
+  /* lightblurpleize buttons */
+  --button-bg: var(--lightblurple2);
+  --button-fg: var(--lightblurple5);
+
+  /* lightblurpleize statuses */
+  --status-bg: var(--lightblurple6);
+  --status-focus-bg: var(--lightblurple6);
+  --status-info-bg: var(--lightblurple5);
+  --status-focus-info-bg: var(--lightblurple5);
+
+  /* Used around statuses + other items */
+  --boxshadow-border: 0.08rem solid black;
+  --size: 20px;
+
+  --link-fg: var(--fg-accent);
+}
