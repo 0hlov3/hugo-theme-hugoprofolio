@@ -3,8 +3,8 @@
 }
 
 .homepage .expertise {
-  color: var(--fg);
-  background-color: var(--profile-bg);
+  color: var(--text);
+  background-color: var(--fg);
   padding: 50px 0px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px -3px 8px;
 }
@@ -73,7 +73,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(var(--blurple7), var(--profile-bg));
+  background: linear-gradient(var(--hero-gradient-top), var(--hero-gradient-bottom));
 }
 
 .homepage .hero H1 {

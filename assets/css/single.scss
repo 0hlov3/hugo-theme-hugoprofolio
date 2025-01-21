@@ -1,10 +1,11 @@
 .single-container-outer {
-  background: linear-gradient(var(--blurple7), var(--profile-bg));
+  background: linear-gradient(var(--bg-accent), var(--bg));
   padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .single-container {
-  color: var(--fg);
+  color: var(--text);
   align-self: center;
 
   width: 90%;
@@ -12,23 +13,28 @@
   max-width: 1024px;
 }
 
-.signle-container a {
+.single-container a {
   color: var(--link-fg);
   text-decoration: underline;
+
+  &:hover {
+    color: var(--link-hover);
+  }
 }
 
 .single-container .canonicalURL {
   text-align: center;
-  background: var(--status-focus-info-bg);
+  background: var(--warn);
   padding: 5px;
-  border: var(--boxshadow-border);
+  box-shadow: var(--boxshadow-border);
+  a {
+    color: var(--text);
+  }
 }
 
 .single-item {
-  background: var(--status-focus-bg);
-  background: var(--status-bg);
+  background: var(--fg);
   box-shadow: var(--boxshadow-border);
-  border: var(--boxshadow-border);
   border-radius: var(--br);
   position: relative;
   margin: 1rem 0;
@@ -45,23 +51,18 @@
   flex-wrap: wrap;
   column-gap: 1rem;
   row-gap: 0.5rem;
-  box-shadow: var(--boxshadow);
-  border: var(--boxshadow-border);
+  box-shadow: var(--boxshadow-border);
 }
 
 .single-container .single-header {
   column-gap: 1rem;
   row-gap: 0.5rem;
-  box-shadow: var(--boxshadow);
-  border: var(--boxshadow-border);
+  box-shadow: var(--boxshadow-border);
   text-align: center;
   padding: 20px 10px;
-  background: var(--status-focus-bg);
-  background: var(--status-bg);
-  border: var(--boxshadow-border);
-  border-radius: var(--br);
+  background: var(--fg);
   position: relative;
-  margin: 1rem 0;
+  margin: 0 0 1rem 0;
 }
 
 .single-container .single-header H1 {
@@ -70,10 +71,13 @@
 
 .single-item-date {
   text-align: center;
-  background: var(--status-focus-info-bg);
+  background: var(--warn);
   padding: 5px;
   .post-datetags {
     margin: 0;
+  }
+  a {
+    color: var(--text);
   }
 }
 
@@ -93,6 +97,9 @@
   width: 100%;
 }
 
+/* No Idea what to do with Codeblocks */
+/*
 .single-container .highlight pre {
   background-color: var(--bg) !important;
 }
+*/

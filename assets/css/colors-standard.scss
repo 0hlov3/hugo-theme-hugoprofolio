@@ -1,38 +1,43 @@
 :root {
   /* Define our nice standart palette */
-  --standart1: #ebe6f8;
-  --standart2: #d6cceb;
-  --standart3: #c2b3e1;
-  --standart4: #aa60ff;
-  --standart5: #783d9f;
-  --standart6: #ffffff;
-  --standart7: #ffffff;
-
-  /* Override orange trim */
+  /* Accents */
+  --standart1: #FFA726;
+  /* Links */
+  --standart2: #FF6384;
+  /* Text */
+  --standart3: #333333;
+  /* Foreground */
+  --standart4: #FFFFFF;
+  /* Background Accent */
+  --standart5: #ECECEC;
+  /* Background */
+  --standart6: #F7F5F2;
+  /* orange trim */
   --orange2: #fad000;
 
-  /* Basic page styling (background + foreground) */
-  --bg: var(--standart7);
-  --bg-accent: var(--standart6);
-  --fg: var(--standart1);
-  --fg-reduced: var(--standart2);
+  --black: #000000;
+  --dark: #1a222c;
 
-  /* Profile page styling */
-  --profile-bg: var(--standart6);
+  /* Basic page styling (background + foreground) */
+  --bg: var(--standart6);
+  --bg-accent: var(--standart5);
+  --fg: var(--standart4);
+  --fg-reduced: var(--standart1);
 
   /* standartize buttons */
   --button-bg: var(--standart2);
   --button-fg: var(--standart5);
 
-  /* standartize statuses */
-  --status-bg: var(--standart6);
-  --status-focus-bg: var(--standart6);
-  --status-info-bg: var(--standart5);
-  --status-focus-info-bg: var(--standart5);
-
   /* Used around statuses + other items */
-  --boxshadow-border: 0.08rem solid black;
+  --boxshadow-border: 0 4px 6px rgba(0, 0, 0, 0.1);
   --size: 20px;
 
-  --link-fg: var(--fg-accent);
+  --text: var(--standart3);
+  --link-fg: var(--standart2);
+  --link-hover: var(--standart1);
+
+  --warn: var(--standart2);
+
+  --hero-gradient-top: var(--standart3);
+  --hero-gradient-bottom: var(--dark);
 }
