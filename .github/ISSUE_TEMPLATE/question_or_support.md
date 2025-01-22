@@ -1,4 +1,10 @@
-# ❓ Question/Support Request
+---
+name: ❓ Question/Support Request
+about: Clearly describe your question or the problem you’re facing.
+title: ''
+labels: question
+assignees: ''
+---
 
 ## Question or Problem
 Clearly describe your question or the problem you’re facing.

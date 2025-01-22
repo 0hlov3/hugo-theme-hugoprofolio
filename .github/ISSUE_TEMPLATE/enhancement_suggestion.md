@@ -1,4 +1,10 @@
-# 🔧 Enhancement Suggestion
+---
+name: 🔧 Enhancement Suggestion
+about: Report the enhancement you would like to propose.
+title: ''
+labels: enhancement
+assignees: ''
+---
 
 ## Description
 Describe the enhancement you would like to propose.

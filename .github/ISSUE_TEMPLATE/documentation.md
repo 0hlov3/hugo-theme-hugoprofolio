@@ -1,4 +1,10 @@
-# 📚 Documentation Request
+---
+name: 📚 Documentation Request
+about: Report the part of the documentation needs improvement.
+title: ''
+labels: enhancement
+assignees: ''
+---
 
 ## Description
 What part of the documentation needs improvement or addition?

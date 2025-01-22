@@ -1,4 +1,10 @@
-# 🐛 Bug Report
+---
+name: 🐛 Bug Report
+about: Report a bug with the theme
+title: ''
+labels: bug
+assignees: ''
+---
 
 ## Description
 A clear and concise description of the bug.

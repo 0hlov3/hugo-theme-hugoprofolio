@@ -1,4 +1,10 @@
-# 🎨 Custom Design Request
+---
+name: 🎨 Custom Design Request
+about: Report a custom design or styling you’d like to see
+title: ''
+labels: feature
+assignees: ''
+---
 
 ## Description
 Describe the custom design or styling you’d like to see.

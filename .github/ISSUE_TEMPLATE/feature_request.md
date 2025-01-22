@@ -1,4 +1,10 @@
-# ✨ Feature Request
+---
+name: ✨ Feature Request
+about: A clear and concise description of the feature you're requesting.
+title: ''
+labels: feature
+assignees: ''
+---
 
 ## Description
 A clear and concise description of the feature you're requesting.
