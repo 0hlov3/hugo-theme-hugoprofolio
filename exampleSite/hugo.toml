@@ -1,0 +1,33 @@
+baseURL = "https://example.org/"
+languageCode = 'en-us'
+title = 'Hugo Profolio'
+theme = "hugo-theme-hugoprofolio"
+themesDir = "../../"
+
+
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Posts'
+pageRef = '/posts'
+weight = 20
+
+[[menus.main]]
+name = 'Resume'
+pageRef = '/resume'
+weight = 40
+
+[params]
+title = "Alice"
+subtitle = "Senior DevOps Engineer & Kubestronaut"
+author = "Alice"
+SelfPortrait = "siluhette.jpg"
+
+[params.userinfo]
+user_description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare ex a imperdiet cursus. Vestibulum ante ipsum."
+user_design = "primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi vitae luctus mi. Sed pellentesque placerat."
+user_code = " mauris, imperdiet egestas mi. Integer ac scelerisque mi, vel pharetra risus. Nunc aliquam erat eget fringilla placerat."
+user_tools = "Aliquam erat volutpat. Maecenas commodo, diam id accumsan porttitor, augue enim commodo risus. a eleifend felis lectus ut dolor"

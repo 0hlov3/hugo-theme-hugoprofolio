@@ -109,7 +109,9 @@ fabric.properties
 
 ### Hugo template
 # Generated files by hugo
+**/public/**
 /public/
+**/resources/_gen/
 /resources/_gen/
 /assets/jsconfig.json
 hugo_stats.json
@@ -121,6 +123,7 @@ hugo.linux
 
 # Temporary lock file while building
 /.hugo_build.lock
+**/.hugo_build.lock
 
 ### Go template
 # If you prefer the allow list template instead of the deny list, see community template:
