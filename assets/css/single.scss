@@ -103,3 +103,62 @@
   background-color: var(--bg) !important;
 }
 */
+
+/* #### */
+/* List */
+/* #### */
+.single-container UL {
+
+}
+/* ##### */
+/* TABLE */
+/* ##### */
+.single-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.single-container thead {
+  background-color: var(--table-thead);
+  color: white;
+}
+
+.single-container th, .single-container td {
+  padding: 12px 15px;
+  border: 1px solid var(--table-border);
+}
+
+.single-container th {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.single-container tr:nth-child(even) {
+  background-color: var(--standart5);
+}
+
+.single-container tr:hover {
+  background-color: var(--table-hover);
+  color: var(--standart6);
+  cursor: pointer;
+}
+
+.single-container tbody tr {
+  transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .single-container table {
+    font-size: 14px;
+  }
+
+  .single-container th, .single-container td {
+    padding: 8px 10px;
+  }
+}
