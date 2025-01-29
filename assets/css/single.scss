@@ -161,16 +161,6 @@
 .single-container tbody tr {
   transition: all 0.2s ease-in-out;
 }
-
-@media (max-width: 600px) {
-  .single-container table {
-    font-size: 14px;
-  }
-
-  .single-container th, .single-container td {
-    padding: 8px 10px;
-  }
-}
 /* Responsive Design */
 
 /* Tablet View (max-width: 768px) */
@@ -186,5 +176,12 @@
   }
   .single-container-outer .single-container .single-container-inner {
     padding: 0 1em;
+  }
+  .single-container table {
+    font-size: 14px;
+  }
+
+  .single-container th, .single-container td {
+    padding: 8px 10px;
   }
 }
