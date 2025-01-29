@@ -211,3 +211,30 @@
   fill: var(--fg); /* Change the color */
   transition: fill 0.3s ease; /* Smooth transition for hover effect */
 }
+
+
+/* Responsive Design */
+
+/* Tablet View (max-width: 768px) */
+@media (max-width: 768px) {
+
+}
+
+/* Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .homepage .hero .homepageContainer {
+    max-width: 100%;
+    width: 100%;
+  }
+  .homepage .hero .homepageContainer-inner {
+    padding: 0 1em;
+  }
+  .homepage .hero .homepageContainer .social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  .homepage .hero .homepageContainer .social-icons a {
+  }
+}
