@@ -174,3 +174,20 @@
     padding: 8px 10px;
   }
 }
+/* Responsive Design */
+
+/* Tablet View (max-width: 768px) */
+@media (max-width: 768px) {
+
+}
+
+/* Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .single-container-outer .single-container {
+    margin: 0;
+    width: 100%;
+  }
+  .single-container-outer .single-container .single-container-inner {
+    padding: 0 1em;
+  }
+}

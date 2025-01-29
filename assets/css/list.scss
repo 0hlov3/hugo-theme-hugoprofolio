@@ -22,8 +22,7 @@
 }
 
 .list-item {
-  background: var(--status-focus-bg);
-  background: var(--status-bg);
+  background: var(--fg);
   box-shadow: var(--boxshadow-border);
   border: var(--boxshadow-border);
   border-radius: var(--br);

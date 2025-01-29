@@ -13,17 +13,16 @@ body {
   align-items: center;
   text-align: center;
   border-top-width: 1px;
-  padding: 1px 0px;
+  padding: 10px 0;
 }
 
 .footer a {
   color: var(--link-fg);
   text-decoration: underline;
-}
 
-.footer a:hover {
-  color: var(--link-hover);
-  text-decoration: underline;
+  &:hover {
+    color: var(--link-hover);
+  }
 }
 
 a {
@@ -36,9 +35,12 @@ a {
   width: 100%;
   position: sticky;
   top: 0;
+  left: 0;
+  display: flex;
   z-index: 1000;
 }
 
+/* Navigation Bar */
 .nav-bar {
   width: 100%;
   background-color: var(--bg);
@@ -46,10 +48,13 @@ a {
   position: sticky;
   top: 0;
   z-index: 1000;
+  padding: 10px 20px;
 }
 
 .nav-bar .nav-bar-inner {
-  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-bar ul,
@@ -61,15 +66,14 @@ a {
 
 .nav-list {
   display: flex;
-  justify-content: center; // Center the navigation
+  justify-content: center;
   align-items: center;
-  gap: 20px; // Space between menu items
+  gap: 20px;
 }
 
 .nav-item {
   margin: 0;
 }
-
 
 .nav-link {
   text-decoration: none;
@@ -86,35 +90,58 @@ a {
   }
 
   &.active {
-    background-color: var(--button-bg); // Highlight active link
-    color: var(--text); // Contrast text color
+    background-color: var(--button-bg);
+    color: var(--text);
     font-weight: bold;
   }
 }
 
 /* Style for the active link */
 .nav-link[aria-current="page"] {
-  //background-color: #FFD700; /* Highlight active link */
-  //color: #1B2735; /* Contrast text color */
-  background-color: var(--button-bg); // Highlight active link
-  color: var(--button-fg); // Contrast text color
+  background-color: var(--button-bg);
+  color: var(--button-fg);
   font-weight: bold;
 }
 
 /* Responsive Design */
+
+/* Tablet View (max-width: 768px) */
 @media (max-width: 768px) {
-  .nav-list {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px; // Reduce gap for smaller screens
+  .nav-bar {
+    padding: 10px 15px;
   }
 
-  .nav-bar {
-    padding: 15px;
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
 
   .nav-link {
-    font-size: 16px; // Adjust font size
+    font-size: 16px;
     padding: 10px;
+  }
+}
+
+/* Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .nav-bar {
+    padding: 8px 12px;
+  }
+
+  .nav-bar .nav-bar-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 8px 10px;
   }
 }
