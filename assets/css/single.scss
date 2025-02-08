@@ -129,7 +129,6 @@
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
-  font-size: 18px;
   text-align: left;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: table; 
@@ -159,14 +158,27 @@
 .single-container tr:hover {
   background-color: var(--table-hover);
   color: var(--standart6);
-  cursor: pointer;
 }
 
 .single-container tbody tr {
   transition: all 0.2s ease-in-out;
 }
+/* Responsive Design */
 
-@media (max-width: 600px) {
+/* Tablet View (max-width: 768px) */
+@media (max-width: 768px) {
+
+}
+
+/* Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .single-container-outer .single-container {
+    margin: 0;
+    width: 100%;
+  }
+  .single-container-outer .single-container .single-container-inner {
+    padding: 0 1em;
+  }
   .single-container table {
     font-size: 14px;
   }

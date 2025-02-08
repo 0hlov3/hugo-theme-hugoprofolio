@@ -31,3 +31,14 @@ user_description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Don
 user_design = "primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi vitae luctus mi. Sed pellentesque placerat."
 user_code = " mauris, imperdiet egestas mi. Integer ac scelerisque mi, vel pharetra risus. Nunc aliquam erat eget fringilla placerat."
 user_tools = "Aliquam erat volutpat. Maecenas commodo, diam id accumsan porttitor, augue enim commodo risus. a eleifend felis lectus ut dolor"
+
+[params.social]
+email = "contact@my.local"
+#twitter: 0hlov3s
+linkedin = "https://my.local"
+matrix_url = "matrix.to/#/@my.local"
+medium = "https://my.local/"
+mastodon = "https://my.local"
+stackoverflow = "https://my.local"
+github = "https://my.local"
+gitlab = "https://my.local"

@@ -1,7 +1,7 @@
 .resume-outer {
   display: flex;
   justify-content: space-between;
-  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .resume-outer hr {
@@ -47,4 +47,64 @@
 
 .resume-outer .resume-content {
   padding: 15px;
+}
+
+/* Responsive Design */
+
+/* Tablet View (max-width: 768px) */
+@media (max-width: 768px) {
+  .resume-outer {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .resume-about-container {
+    width: 80%;
+  }
+
+  .resume-about-container .resume-image {
+    text-align: center;
+  }
+  .resume-about-container .resume-image img {
+    max-width: 150px;
+    margin: 0 auto;
+  }
+  .resume-about-container H3 {
+    text-align: center;
+  }
+
+  .resume-outer .single-item-content {
+    width: 100%;
+  }
+
+  .resume-outer .resume-content-name h2 {
+    font-size: 2em;
+  }
+
+}
+
+/* Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .resume-about-container {
+    width: auto;
+  }
+
+  .resume-about-container .resume-image img {
+    max-width: 120px; /* Smaller profile picture */
+  }
+
+  .resume-outer .single-item-content {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .resume-outer .resume-content-name h2 {
+    font-size: 1.8em;
+  }
+
+  .resume-outer .resume-content {
+    font-size: 14px; /* Adjust font size for readability */
+  }
 }

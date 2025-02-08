@@ -13,6 +13,16 @@
   max-width: 1024px;
 }
 
+.list-container .list-container-header {
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+  box-shadow: var(--boxshadow-border);
+  padding: 20px 10px;
+  background: var(--fg);
+  position: relative;
+  margin: 0 0 1rem 0;
+}
+
 .list-container a {
   color: var(--link-fg);
   text-decoration: underline;
@@ -22,8 +32,7 @@
 }
 
 .list-item {
-  background: var(--status-focus-bg);
-  background: var(--status-bg);
+  background: var(--fg);
   box-shadow: var(--boxshadow-border);
   border: var(--boxshadow-border);
   border-radius: var(--br);
