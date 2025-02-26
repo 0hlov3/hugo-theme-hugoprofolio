@@ -22,7 +22,13 @@
           {{ if .Params.subtitle }}
           <h3><a href="{{ .RelPermalink }}">{{ .Params.subtitle }}</a></h3>
           {{ end }}
-          <p>{{ .Summary | plainify | truncate 500 "..." }}</p>
+          {{ $cleanContent := .Content |
+          replaceRE "(?s)<div class=\"custom-toc\">.*?</div>" "" |
+          replaceRE "(?s)<figure>.*?</figure>" "" |
+          replaceRE "(?s)<img[^>]*>" "" }}
+          {{ $cleanSummary := $cleanContent | plainify | truncate 500 "..." }}
+          <p>{{ $cleanSummary }}</p>
+          <!-- <p>{{ .Summary | plainify | truncate 500 "..." }}</p> -->
         </div>
         <div class="list-item-date">
           <p class="post-datetags">{{ .Date.Format "Jan 2, 2006" }} -
