@@ -1,24 +1,24 @@
-baseURL = "https://example.org/"
+baseURL = "http://localhost:1313/"
 languageCode = 'en-us'
 title = 'Hugo Profolio'
 theme = "hugo-theme-hugoprofolio"
 themesDir = "../../"
 
+[menus]
+  [[menus.main]]
+  name = 'Home'
+  pageRef = '/'
+  weight = 10
 
-[[menus.main]]
-name = 'Home'
-pageRef = '/'
-weight = 10
+  [[menus.main]]
+  name = 'Posts'
+  pageRef = '/posts'
+  weight = 20
 
-[[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
-weight = 20
-
-[[menus.main]]
-name = 'Resume'
-pageRef = '/resume'
-weight = 40
+  [[menus.main]]
+  name = 'Resume'
+  pageRef = '/resume'
+  weight = 40
 
 [params]
 title = "Alice"
