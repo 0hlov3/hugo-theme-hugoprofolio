@@ -27,6 +27,9 @@
 <link rel="stylesheet" href="{{ $fontsCSS.RelPermalink }}" />
 {{ $homepageSCSS := resources.Get "css/homepage.scss" | toCSS | minify }}
 <link rel="stylesheet" href="{{ $homepageSCSS.RelPermalink }}" />
+{{- with resources.Get "css/projects.scss" | toCSS | minify }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{- end }}
 <!-- our project just needs Font Awesome Solid + Brands -->
 {{- with resources.Get "css/all.css" | toCSS | minify }}
 <link rel="stylesheet" href="{{ .RelPermalink }}" />

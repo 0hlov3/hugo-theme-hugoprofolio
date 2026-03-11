@@ -1,0 +1,44 @@
+{{ define "main" }}
+<div class="projects-container-outer">
+  <div class="projects-container">
+    <div class="projects-header">
+      <h1>{{ .Title }}</h1>
+      {{ with .Content }}<div class="projects-header-content">{{ . }}</div>{{ end }}
+    </div>
+    <div class="projects-grid">
+      {{ range .Pages }}
+      <div class="project-card">
+        {{ if .Params.status }}
+        <span class="project-card-status project-status-{{ .Params.status }}">{{ .Params.status }}</span>
+        {{ end }}
+        <h2 class="project-card-title">
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </h2>
+        {{ if .Params.description }}
+        <p class="project-card-desc">{{ .Params.description }}</p>
+        {{ end }}
+        {{ with .Params.tags }}
+        <div class="project-card-tags">
+          {{ range . }}
+          <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+          {{ end }}
+        </div>
+        {{ end }}
+        <div class="project-card-links">
+          {{ if .Params.github }}
+          <a href="{{ .Params.github }}" target="_blank" rel="noopener noreferrer" class="project-link">
+            <i class="fa fa-github" aria-hidden="true"></i> GitHub
+          </a>
+          {{ end }}
+          {{ if .Params.demo }}
+          <a href="{{ .Params.demo }}" target="_blank" rel="noopener noreferrer" class="project-link">
+            <i class="fa fa-external-link" aria-hidden="true"></i> Demo
+          </a>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}
