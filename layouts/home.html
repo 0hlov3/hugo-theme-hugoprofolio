@@ -64,8 +64,15 @@
                             </a>
                             {{- end }}
                             {{- if .Site.Params.social.gitlab }}
-                            <a href="{{ .Site.Params.social.gitlab }}" aria-label="GitHub" target="_blank">
+                            <a href="{{ .Site.Params.social.gitlab }}" aria-label="GitLab" target="_blank">
                                 <i class="icon fa fa-gitlab"></i>
+                            </a>
+                            {{- end }}
+                            {{- if .Site.Params.social.codeberg }}
+                            <a href="{{ .Site.Params.social.codeberg }}" aria-label="Codeberg" target="_blank">
+                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M11.955.005A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12.045.005a12 12 0 0 0-.09 0zm-.04 4.8a7.2 7.2 0 0 1 7.2 7.195 7.2 7.2 0 0 1-7.2 7.2 7.2 7.2 0 0 1-7.2-7.2 7.2 7.2 0 0 1 7.117-7.195H11.916z"/>
+                                </svg>
                             </a>
                             {{- end }}
                         </div>

@@ -7,10 +7,21 @@
       url("/masks/noise-mask.png") 256px 50% / 256px 256px;
     mask-composite: intersect;
     animation: flicker 20s infinite linear;
+    /* Hint to the browser to isolate this element's compositing layer */
+    will-change: mask-position;
+    transform: translateZ(0);
 }
 
 @keyframes flicker {
     to {
         mask-position: 50% 50%, 0 50%;
+    }
+}
+
+/* Respect user's motion preferences — disables the expensive paint loop */
+@media (prefers-reduced-motion: reduce) {
+    .el {
+        animation: none;
+        will-change: auto;
     }
 }

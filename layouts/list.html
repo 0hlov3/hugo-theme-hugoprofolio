@@ -3,14 +3,14 @@
   <div class="list-container">
     <div class="list-container-inner">
       <div class="list-container-header">
-      <h1>{{ .Title }}</h1>
-      {{ .Content }}
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
       </div>
       {{ range .Pages }}
       <div class="list-item">
         <div class="list-item-inner">
-            <div class="{{ if or .Params.featuredImage .Params.image }}list-item-inner-text{{ else }}list-item-inner-text full-width{{ end }}">
-          <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+          <div class="{{ if or .Params.featuredImage .Params.image }}list-item-inner-text{{ else }}list-item-inner-text full-width{{ end }}">
+            <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
             {{ if .Params.subtitle }}
             <h3><a href="{{ .RelPermalink }}">{{ .Params.subtitle }}</a></h3>
             {{ end }}
@@ -19,29 +19,31 @@
             replaceRE "(?s)<figure>.*?</figure>" "" |
             replaceRE "(?s)<img[^>]*>" "" }}
             {{ $cleanSummary := $cleanContent | plainify | truncate 250 "..." }}
-            <p>{{ $cleanSummary }}</p>
-            </div>
-            {{ if or .Params.featuredImage .Params.image }}
-            <div class="list-item-inner-image">
-                {{ if .Params.featuredImage }}
-                <a href="{{ .RelPermalink }}">
-                    <img src="{{ .Params.featuredImage }}" class="featured-image" />
-                </a>
-                {{ else if .Params.image }}
-                <a href="{{ .RelPermalink }}">
-                    <img src="{{ .RelPermalink }}/{{ .Params.image }}" class="featured-image" />
-                </a>
+            <p class="list-item-excerpt">{{ $cleanSummary }}</p>
+            <div class="list-item-meta">
+              <span class="list-item-date-text">{{ .Date.Format "Jan 2, 2006" }}</span>
+              <span class="list-item-readtime">{{ .ReadingTime }} min read</span>
+              {{ with .Params.tags }}
+              <span class="list-item-tags">
+                {{ range $index, $tag := . }}
+                <a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>{{ if lt (add $index 1) (len .) }} {{ end }}
                 {{ end }}
+              </span>
+              {{ end }}
             </div>
+          </div>
+          {{ if or .Params.featuredImage .Params.image }}
+          <div class="list-item-inner-image">
+            {{ if .Params.featuredImage }}
+            <a href="{{ .RelPermalink }}">
+              <img src="{{ .Params.featuredImage }}" class="featured-image" alt="{{ .LinkTitle }}" />
+            </a>
+            {{ else if .Params.image }}
+            <a href="{{ .RelPermalink }}">
+              <img src="{{ .RelPermalink }}/{{ .Params.image }}" class="featured-image" alt="{{ .LinkTitle }}" />
+            </a>
             {{ end }}
-        </div>
-        <div class="list-item-date">
-          <p class="post-datetags">{{ .Date.Format "Jan 2, 2006" }} -
-          {{ with .Params.tags }}
-            {{ range $index, $tag := . }}
-            <a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>{{ if lt (add $index 1) (len .) }} {{ end }}
-            {{ end }}
-          </p>
+          </div>
           {{ end }}
         </div>
       </div>

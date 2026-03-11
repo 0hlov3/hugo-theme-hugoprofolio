@@ -1,16 +1,15 @@
 .single-container-outer {
-  background: linear-gradient(var(--bg-accent), var(--bg));
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+  background: var(--bg);
+  padding-bottom: 3rem;
+  padding-top: 1.5rem;
 }
 
 .single-container {
   color: var(--text);
   align-self: center;
-
   width: 90%;
   margin: 0 auto;
-  max-width: 1024px;
+  max-width: 740px;
 }
 
 .single-container a {
@@ -24,25 +23,99 @@
 
 .single-container .canonicalURL {
   text-align: center;
-  background: var(--warn);
-  padding: 5px;
-  box-shadow: var(--boxshadow-border);
+  background: var(--bg-accent);
+  border-left: 3px solid var(--link-fg);
+  padding: 10px 16px;
+  margin-bottom: 1.5rem;
+  border-radius: 2px;
+  font-size: 0.9rem;
   a {
-    color: var(--text);
+    color: var(--link-fg);
   }
 }
 
 .single-item {
-  background: var(--fg);
-  box-shadow: var(--boxshadow-border);
-  border-radius: var(--br);
+  background: transparent;
   position: relative;
-  margin: 1rem 0;
+  margin: 0;
   padding: 0;
 }
 
+.single-container .single-header {
+  text-align: left;
+  padding: 0 0 1.5rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--bg-accent);
+
+  h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #6b6b6b;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+}
+
 .single-item-content {
-  padding: 0.5rem 0.75rem;
+  padding: 2rem 0 0;
+  font-family: 'Source Serif 4', Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 19px;
+  line-height: 1.85;
+  font-weight: 400;
+
+  p {
+    margin: 0 0 1.5em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 2rem 0 0.75rem;
+  }
+
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  h4 { font-size: 1.1rem; }
+
+  blockquote {
+    border-left: 4px solid var(--link-fg);
+    margin: 1.5em 0;
+    padding: 0.5em 1.25em;
+    color: #6b6b6b;
+    font-style: italic;
+    p { margin: 0; }
+  }
+
+  ul, ol {
+    padding-left: 1.75em;
+    margin: 0 0 1.5em;
+    li {
+      margin-bottom: 0.4em;
+    }
+  }
+
+  strong { font-weight: 700; }
+
+  code {
+    font-family: "MesloLGS NF", "Source Code Pro", monospace;
+    font-size: 0.85em;
+    background: var(--bg-accent);
+    padding: 2px 5px;
+    border-radius: 3px;
+  }
+}
+
+.single-item-inner {
 }
 
 .single-container .thread {
@@ -51,33 +124,33 @@
   flex-wrap: wrap;
   column-gap: 1rem;
   row-gap: 0.5rem;
-  box-shadow: var(--boxshadow-border);
-}
-
-.single-container .single-header {
-  column-gap: 1rem;
-  row-gap: 0.5rem;
-  box-shadow: var(--boxshadow-border);
-  text-align: center;
-  padding: 20px 10px;
-  background: var(--fg);
-  position: relative;
-  margin: 0 0 1rem 0;
-}
-
-.single-container .single-header H1 {
-  margin: 0;
 }
 
 .single-item-date {
-  text-align: center;
-  background: var(--warn);
-  padding: 5px;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--bg-accent);
+  font-size: 0.85rem;
+  color: #9b9b9b;
   .post-datetags {
     margin: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
   a {
-    color: var(--text);
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: var(--bg-accent);
+    color: #6b6b6b;
+    text-decoration: none;
+    font-size: 0.8rem;
+    &:hover {
+      background: var(--link-fg);
+      color: var(--fg);
+    }
   }
 }
 
@@ -85,54 +158,51 @@
   white-space: pre;
   overflow-x: auto;
   word-wrap: normal;
-  padding: 10px 10px;
+  padding: 16px 20px;
+  border-radius: 4px;
+  margin: 1.5em 0;
+  font-size: 0.85em;
 }
 
 .single-container pre code {
   font-family: "MesloLGS NF", "Source Code Pro", monospace;
-  font-size: 12px;
+  font-size: 13px;
+  background: none;
+  padding: 0;
+  border-radius: 0;
 }
 
 .single-container IMG {
   width: 100%;
+  border-radius: 2px;
 }
 
 .single-container .single-item-content figure {
   width: 100%;
-  margin: 0;
+  margin: 2em 0;
   figcaption {
     p {
-      margin: 0;
+      margin: 0.5em 0 0;
       text-align: center;
-      font-size: 100%;
+      font-size: 0.85rem;
+      color: #9b9b9b;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-style: italic;
     }
   }
 }
 
-/* No Idea what to do with Codeblocks */
-/*
-.single-container .highlight pre {
-  background-color: var(--bg) !important;
-}
-*/
-
-/* #### */
-/* List */
-/* #### */
-.single-container UL {
-
-}
-/* ##### */
 /* TABLE */
-/* ##### */
 .single-container table {
   width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
+  margin: 1.5em 0;
   text-align: left;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: block; 
-  overflow: scroll; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  display: block;
+  overflow: scroll;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
 }
 
 .single-container thead {
@@ -163,22 +233,24 @@
 .single-container tbody tr {
   transition: all 0.2s ease-in-out;
 }
-/* Responsive Design */
 
-/* Tablet View (max-width: 768px) */
-@media (max-width: 768px) {
-
-}
-
-/* Mobile View (max-width: 480px) */
+/* Mobile View */
 @media (max-width: 480px) {
   .single-container-outer .single-container {
     margin: 0;
     width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
   }
-  .single-container-outer .single-container .single-container-inner {
-    padding: 0 1em;
+
+  .single-item-content {
+    font-size: 17px;
   }
+
+  .single-container .single-header h1 {
+    font-size: 1.6rem;
+  }
+
   .single-container table {
     font-size: 14px;
   }

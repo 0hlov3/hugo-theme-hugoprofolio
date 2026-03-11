@@ -1,4 +1,20 @@
 @font-face {
+  font-family: 'Source Serif 4';
+  src: url('/fonts/SourceSerif4-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Serif 4';
+  src: url('/fonts/SourceSerif4-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'MesloLGS NF';
   src: url('/fonts/MesloLGS-NF-Italic.woff2') format('woff2');
   font-weight: normal;

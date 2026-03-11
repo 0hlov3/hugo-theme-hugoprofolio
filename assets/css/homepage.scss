@@ -139,7 +139,7 @@
     padding: 10px;
     vertical-align: middle;
     text-align: center !important;
-    transition: all 0.5s ease-in-out !important; /* Smooth hover effects */
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, transform 0.5s ease-in-out, border-color 0.5s ease-in-out !important;
     horiz-align: center;
 
     &:hover {
@@ -161,7 +161,7 @@
   img {
     height: 20px;
     margin: 5px;
-    transition: all 0.3s ease-in-out; /* Smooth hover effects */
+    transition: filter 0.3s ease-in-out;
     &:hover {
       -webkit-filter: invert(100%);
       filter: invert(100%);
@@ -174,20 +174,12 @@
 }
 
 @keyframes blink {
-  0% {
-    visibility: visible;
+  0%, 50% {
+    opacity: 1;
   }
 
-  50% {
-    visibility: visible;
-  }
-
-  51% {
-    visibility: hidden;
-  }
-
-  100% {
-    visibility: hidden;
+  51%, 100% {
+    opacity: 0;
   }
 }
 
