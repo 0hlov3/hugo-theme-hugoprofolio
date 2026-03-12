@@ -16,6 +16,11 @@ themesDir = "../../"
   weight = 20
 
   [[menus.main]]
+  name = 'Projects'
+  pageRef = '/projects'
+  weight = 30
+
+  [[menus.main]]
   name = 'Resume'
   pageRef = '/resume'
   weight = 40
@@ -42,3 +47,4 @@ mastodon = "https://my.local"
 stackoverflow = "https://my.local"
 github = "https://my.local"
 gitlab = "https://my.local"
+codeberg = "https://codeberg.org/0hlov3"
