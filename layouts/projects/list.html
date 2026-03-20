@@ -24,10 +24,32 @@
           {{ end }}
         </div>
         {{ end }}
+        {{ if or .Params.starts .Params.ends }}
+        <div class="project-card-dates">
+          {{ if .Params.starts }}{{ .Params.starts }}{{ end }}
+          {{ if and .Params.starts .Params.ends }} – {{ end }}
+          {{ if .Params.ends }}{{ .Params.ends }}{{ end }}
+        </div>
+        {{ end }}
         <div class="project-card-links">
           {{ if .Params.github }}
           <a href="{{ .Params.github }}" target="_blank" rel="noopener noreferrer" class="project-link">
-            <i class="fa fa-github" aria-hidden="true"></i> GitHub
+            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+          </a>
+          {{ end }}
+          {{ if .Params.gitlab }}
+          <a href="{{ .Params.gitlab }}" target="_blank" rel="noopener noreferrer" class="project-link">
+            <i class="fab fa-gitlab" aria-hidden="true"></i> GitLab
+          </a>
+          {{ end }}
+          {{ if .Params.codeberg }}
+          <a href="{{ .Params.codeberg }}" target="_blank" rel="noopener noreferrer" class="project-link">
+            <i class="fa fa-code" aria-hidden="true"></i> Codeberg
+          </a>
+          {{ end }}
+          {{ if .Params.external }}
+          <a href="{{ .Params.external }}" target="_blank" rel="noopener noreferrer" class="project-link">
+            <i class="fa fa-external-link" aria-hidden="true"></i> External
           </a>
           {{ end }}
           {{ if .Params.demo }}

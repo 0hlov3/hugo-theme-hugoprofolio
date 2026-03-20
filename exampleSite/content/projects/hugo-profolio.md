@@ -5,6 +5,8 @@ tags: ["hugo", "css", "open-source"]
 github: "https://github.com/0hlov3/hugo-theme-hugoprofolio"
 demo: "https://schoenwald.aero"
 status: "active"
+starts: "2024"
+ends: "present"
 ---
 
 A Hugo theme built for DevOps engineers and developers who want a clean personal site with a blog, resume, and portfolio section.
