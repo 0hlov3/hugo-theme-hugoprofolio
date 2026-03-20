@@ -1,0 +1,70 @@
+{{ define "main" }}
+<div class="single-container-outer">
+    <div class="single-container">
+        <div class="single-container-inner">
+            <div class="single-header">
+                <h1>{{ .Title }}</h1>
+                {{ if .Params.subtitle }}
+                <h2>{{ .Params.subtitle }}</h2>
+                {{ end }}
+            </div>
+            <div class="single-item">
+                <div class="single-item-inner">
+                    <div class="single-item-content">
+
+                        {{ .Content }}
+
+                    </div>
+                    <div class="project-card-links">
+                        {{ if .Params.github }}
+                        <a href="{{ .Params.github }}" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                        </a>
+                        {{ end }}
+                        {{ if .Params.gitlab }}
+                        <a href="{{ .Params.gitlab }}" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fab fa-gitlab" aria-hidden="true"></i> GitLab
+                        </a>
+                        {{ end }}
+                        {{ if .Params.codeberg }}
+                        <a href="{{ .Params.codeberg }}" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fa fa-code" aria-hidden="true"></i> Codeberg
+                        </a>
+                        {{ end }}
+                        {{ if .Params.external }}
+                        <a href="{{ .Params.external }}" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fa fa-external-link" aria-hidden="true"></i> External
+                        </a>
+                        {{ end }}
+                        {{ if .Params.demo }}
+                        <a href="{{ .Params.demo }}" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <i class="fa fa-external-link" aria-hidden="true"></i> Demo
+                        </a>
+                        {{ end }}
+                    </div>
+                    <div class="single-item-date">
+                        <p class="post-datetags">
+                            {{ if or .Params.starts .Params.ends }}
+                            {{ if .Params.starts }}{{ .Params.starts }}{{ end }}
+                            {{ if and .Params.starts .Params.ends }} – {{ end }}
+                            {{ if .Params.ends }}{{ .Params.ends }}{{ end }}
+                            {{ else if not .Date.IsZero }}
+                            {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+                            {{ $dateHuman := .Date | time.Format ":date_long" }}
+                            <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+                            {{ end }}
+                            {{ with .Params.tags }}
+                            -
+                            {{ range $index, $tag := . }}
+                            <a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>{{ if lt (add $index 1) (len .) }} {{ end
+                            }}
+                            {{ end }}
+                            {{ end }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

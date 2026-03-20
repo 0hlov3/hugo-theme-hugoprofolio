@@ -31,10 +31,12 @@
                 -->
                     <div class="single-item-date">
                         <p class="post-datetags">
+                            {{ if not .Date.IsZero }}
                             {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
                             {{ $dateHuman := .Date | time.Format ":date_long" }}
                             <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
                             -
+                            {{ end }}
                             {{ with .Params.tags }}
                             {{ range $index, $tag := . }}
                             <a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>{{ if lt (add $index 1) (len .) }} {{ end

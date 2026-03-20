@@ -6,7 +6,7 @@
       {{ with .Content }}<div class="projects-header-content">{{ . }}</div>{{ end }}
     </div>
     <div class="projects-grid">
-      {{ range .Pages }}
+      {{ range sort .Pages ".Params.starts" "desc" }}
       <div class="project-card">
         {{ if .Params.status }}
         <span class="project-card-status project-status-{{ .Params.status }}">{{ .Params.status }}</span>
